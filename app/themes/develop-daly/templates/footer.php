@@ -1,3 +1,5 @@
+<?php get_template_part( 'templates' ); ?>
+
 <footer class="content-info container" role="contentinfo">
   <div class="row">
     <div class="col-lg-12">
