@@ -14,8 +14,6 @@ sql-dump-*.sql
 # Application
 app/uploads
 app/upgrade
-app/plugins/*
-app/mu-plugins/*
 !app/mu-plugins/register-theme-directory.php
 app/cache
 
