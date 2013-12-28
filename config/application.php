@@ -59,3 +59,8 @@ define('DISALLOW_FILE_EDIT', true);
 if (!defined('ABSPATH')) {
   define('ABSPATH', $root_dir . '/wp/');
 }
+
+/**
+ * Super Cache
+ */
+define( 'WPCACHEHOME', $root_dir .'/app/plugins/wp-super-cache/' );
