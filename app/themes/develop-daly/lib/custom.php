@@ -39,6 +39,7 @@ class WeDevs_Bootstrap {
         wp_enqueue_script( 'wp-api');
         wp_enqueue_script( 'backbone');
         wp_enqueue_script( 'underscore');
+        wp_enqueue_script( 'backbone-analytics', $template_directory . '/assets/js/backbone.analytics.js', array('backbone'), '20120202', true );
 
         // comment reply on single posts
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
