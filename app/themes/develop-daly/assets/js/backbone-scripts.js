@@ -1,6 +1,8 @@
-(function($){
+(function ($) {
+    
+    "use strict";
 
-    $(function() {
+    $(function () {
 
         $.fn.center = function () {
             this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
@@ -69,7 +71,7 @@
             el: '#content',
 
             initialize: function() {
-                // console.log('initializing single post view');
+                console.log('initializing single post view');
             },
 
             events: {

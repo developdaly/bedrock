@@ -2,14 +2,62 @@
  * Roots 6.5.1
  */
 
+@font-face {
+    font-family: 'DD_QquattroCento_Roman';
+    src: url('../fonts/dd-quattrocento/dd-quattrocento-regular-webfont.eot');
+    src: url('../fonts/dd-quattrocento/dd-quattrocento-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dd-quattrocento/dd-quattrocento-regular-webfont.woff') format('woff'),
+         url('../fonts/dd-quattrocento/dd-quattrocento-regular-webfont.ttf') format('truetype'),
+         url('../fonts/dd-quattrocento/dd-quattrocento-regular-webfont.svg#quattrocento_romanregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DD_Aamaranth';
+    src: url('../fonts/dd-amaranth/dd-amaranth-regular-webfont.eot');
+    src: url('../fonts/dd-amaranth/dd-amaranth-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dd-amaranth/dd-amaranth-regular-webfont.woff') format('woff'),
+         url('../fonts/dd-amaranth/dd-amaranth-regular-webfont.ttf') format('truetype'),
+         url('../fonts/dd-amaranth/dd-amaranth-regular-webfont.svg#amaranthregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DD_Aamaranth';
+    src: url('../fonts/dd-amaranth/dd-amaranth-bold-webfont.eot');
+    src: url('../fonts/dd-amaranth/dd-amaranth-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dd-amaranth/dd-amaranth-bold-webfont.woff') format('woff'),
+         url('../fonts/dd-amaranth/dd-amaranth-bold-webfont.ttf') format('truetype'),
+         url('../fonts/dd-amaranth/dd-amaranth-bold-webfont.svg#amaranthregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import "bootstrap/bootstrap.less";
+@import "custom-variables.less";
+
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body { }
 
+body {
+    font-family: @font-family-serif;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-style: normal;
+    color: #333332;
+    font-size: 18px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "DD_Aamaranth";
+}
 
 
 /* ==========================================================================
@@ -24,7 +72,10 @@ body { }
    Content
    ========================================================================== */
 
-.content { }
+.content {
+    letter-spacing: .01rem;
+    line-height: 1.5;
+}
 
 
 
@@ -33,6 +84,10 @@ body { }
    ========================================================================== */
 
 .main { }
+
+.entry-title a {
+    color: #333;
+}
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
@@ -43,7 +98,9 @@ body { }
    Sidebar
    ========================================================================== */
 
-.sidebar { }
+.sidebar {
+    font-size: 15px;
+}
 
 
 

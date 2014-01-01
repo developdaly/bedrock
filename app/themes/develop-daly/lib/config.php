@@ -20,10 +20,10 @@ define('POST_EXCERPT_LENGTH', 40); // Length in words for excerpt_length filter 
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'col-sm-8';
+    $class = 'col-sm-6';
   } else {
     // Classes on full width pages
-    $class = 'col-sm-12';
+    $class = 'col-sm-8';
   }
 
   return $class;
@@ -33,7 +33,7 @@ function roots_main_class() {
  * .sidebar classes
  */
 function roots_sidebar_class() {
-  return 'col-sm-4';
+  return 'col-sm-2';
 }
 
 /**
@@ -77,3 +77,16 @@ function roots_display_sidebar() {
  * Default: 1140px is the default Bootstrap container width.
  */
 if (!isset($content_width)) { $content_width = 1140; }
+
+/**
+ * Show the sidebar on these pages, despite any previous conditions
+ */
+
+add_filter('roots_display_sidebar', 'roots_sidebar_on_special_page');
+
+function roots_sidebar_on_special_page($sidebar) {
+  if (is_home()) {
+    return true;
+  }
+  return $sidebar;
+}
