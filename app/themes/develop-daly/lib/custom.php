@@ -163,4 +163,4 @@ class WeDevs_Bootstrap {
 
 }
 
-$wedevs_bootstrap = new WeDevs_Bootstrap();
+//$wedevs_bootstrap = new WeDevs_Bootstrap();

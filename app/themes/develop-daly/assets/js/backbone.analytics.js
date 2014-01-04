@@ -1,4 +1,4 @@
-(function() {
+/*(function() {
   var loadUrl = Backbone.History.prototype.loadUrl;
 
   Backbone.History.prototype.loadUrl = function(fragmentOverride) {
@@ -13,4 +13,4 @@
     return matched;
   };
 
-}).call(this);
+}).call(this);*/
