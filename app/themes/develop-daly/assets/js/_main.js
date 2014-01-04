@@ -20,7 +20,7 @@ var ExampleSite = {
 			}
 		}
 				
-		equalHeights($('#content'), $('.sidebar') );
+		equalHeights($('.content'), $('.sidebar') );
 
 		
 		// Check if the cookie is set

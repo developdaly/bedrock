@@ -54,8 +54,7 @@ body {
     font-style: normal;
     color: #333332;
     font-size: 18px;
-    line-height: 1.4;
-	
+    line-height: 1.4;	
     -webkit-font-smoothing: antialiased;
 }
 
@@ -75,7 +74,37 @@ img {
 
 .banner { }
 
+.navbar-default {
+	background-color: #191918;
+	border-color: #000;
+	
+	.navbar-nav>li>a {
+		color: #999;
+		
+		&:hover {
+			color: white;
+		}
+	}
+}
 
+.navbar-brand {
+	background: url('../img/develop-daly-logo.png') no-repeat;
+	display: inline-block;
+	height: 27px;
+	margin-bottom: 10px;
+	margin-right: 30px;
+	margin-top: 10px;
+	text-indent: -9999px;
+	width: 128px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+	.navbar-brand {
+		background: url('../img/develop-daly-logo@2.png') no-repeat;
+		background-size: 128px 27px;
+	}
+}
 
 /* ==========================================================================
    Content
