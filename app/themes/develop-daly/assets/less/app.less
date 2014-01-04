@@ -37,12 +37,15 @@
 
 @import "bootstrap/bootstrap.less";
 @import "custom-variables.less";
+@import "media-queries.less";
 
 
 /* ==========================================================================
    Base
    ========================================================================== */
-
+html,body {
+	height: 100%;
+}
 
 body {
     font-family: @font-family-serif;
@@ -52,6 +55,7 @@ body {
     color: #333332;
     font-size: 18px;
     line-height: 1.4;
+	
     -webkit-font-smoothing: antialiased;
 }
 
@@ -103,8 +107,56 @@ img {
    Sidebar
    ========================================================================== */
 
-.sidebar {
+#sidebar-toggle {
+	background-color: @gray-lighter;
+	border: none;
     font-size: 15px;
+	position: absolute;
+	top: 83px;
+	right: 0;
+	bottom: 0;
+	outline: 0;	
+	color: black;
+	z-index: 99;
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
+    -webkit-transition: color 500ms ease-out;
+    -moz-transition: color 500ms ease-out;
+    -o-transition: color 500ms ease-out;
+    transition: color 500ms ease-out;
+	
+	&:hover {
+		background-color: black;
+		color: white;
+	}
+}
+
+.sidebar {
+	display: none;
+    font-size: 15px;
+	position: absolute;
+	top: 83px;
+	right: 0;
+	bottom: 0;
+	outline: 0;
+	background-color: #191918;
+	color: #fff;
+	width: 350px;
+
+	.sidebar-inner {	
+		max-width: 280px;
+		display: block;
+		overflow-x: auto;
+		overflow-y: auto;
+		padding: 40px;
+		
+		a {
+			color: #fff;
+		}
+	}
+
 }
 
 

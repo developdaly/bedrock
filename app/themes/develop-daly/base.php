@@ -13,18 +13,35 @@
     }
   ?>
 
-  <div class="wrap container" role="document">
-    <div class="content row">
-      <div id="content" class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
-      </div><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+	<div class="wrap" role="document">		
+		
+		<div class="container">
+		
+			<div class="content row">
+				
+				<div class="ghost <?php echo roots_sidebar_class(); ?>"></div>
+				
+				<div id="content" class="main <?php echo roots_main_class(); ?>" role="main">
+					
+					<?php include roots_template_path(); ?>
+					
+				</div><!-- /.main -->
+				
+				<div class="ghost <?php echo roots_sidebar_class(); ?>"></div>					
+				
+				<button id="sidebar-toggle">&#9658;</button>
+			
+				<aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+					
+					<?php include roots_sidebar_path(); ?>
+					
+				</aside><!-- /.sidebar -->
+									
+			</div><!-- /.content -->
+			
+		</div><!-- /.container -->
+								
+	</div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
 
